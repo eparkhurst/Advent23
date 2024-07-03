@@ -5,7 +5,6 @@ const fileContents = fs.readFileSync(path.resolve(__dirname, './data.txt'), 'utf
 
 function memoize(func) {
   const stored = new Map();
-
   return (...args) => {
     const k = JSON.stringify(args);
     if (stored.has(k)) {
