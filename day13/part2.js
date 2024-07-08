@@ -85,8 +85,3 @@ function offByOne(line1, line2) {
   }
   return index;
 }
-
-// console.log(check('.##..#....###.', [1, 1, 3]));
-// if (first > 0) return 1;
-// const last = offByOne(map[map.length-1], map[map.length-2]);
-// if(last >0) return map.length - 2
