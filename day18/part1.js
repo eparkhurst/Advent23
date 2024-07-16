@@ -41,14 +41,9 @@ const main = () => {
       break;
     }
   }
-  // pretty.map((r, i) => {
-  //   console.log(r.join(''));
-  // });
-  console.log(pretty[starty].join(''));
+
   const rl = xMax - xMin + 1;
-  console.log(xMax, xMin, rl);
   const cl = yMax - yMin + 1;
-  console.log(yMax, yMin, cl);
   let visited = {};
   for (let i = 0; i < rl; i++) {
     visited['' + i] = {};
@@ -139,13 +134,3 @@ function addToMap(x, y, map) {
   map[y][x] = '#';
 }
 main();
-
-const p = '..............#...#..#####';
-// console.log(countRow(p));
-
-//10608 too low
-// 11195 too low
-// 46803 too low
-// 57030 wrong
-
-//correct? = 50603

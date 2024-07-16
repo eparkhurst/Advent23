@@ -5,10 +5,14 @@ const fileContents = fs.readFileSync(path.resolve(__dirname, './data.txt'), 'utf
 
 let map;
 const main = () => {
-  map = fileContents
-    .trim()
-    .split('\n')
-    .map((l) => l.split('').map((n) => Number(n)));
+  map = fileContents.trim().split('\n');
+
+  map.forEach((line) => {
+    const hex = line.split('#')[1].replace(')', '');
+    const dir = hex[5];
+    const dist = parseInt(hex.slice(0, 5), 16);
+    console.log(dir, dist);
+  });
 
   console.log(map);
 };
